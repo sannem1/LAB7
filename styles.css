@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Times New Roman, Times, serif;
+    line-height: 1.6;
+    background-color: #b59fb6;
+    margin: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #dbc0db;
+    color: rgb(1, 1, 21);
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.profile-pic {
+    max-width: 200px;
+}
+
+.profile-pic img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.contact-info {
+    max-width: 300px;
+}
+
+.professional-info {
+    margin: 20px 0;
+}
+
+.external-links {
+    margin: 20px 0;
+}
+
+.video-section {
+    margin: 20px 0;
+}

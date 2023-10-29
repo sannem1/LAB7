@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EECS 348 Lab Seven Practice Four</title>
+</head>
+<body>
+    <h1>EECS 348 Lab Seven Practice Four</h1>
+    <form method="post">
+        Size of the multiplication table:
+        <input type="number" name="tableSize">
+        <input type="submit" name="submit" value="Submit">
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset($_POST['submit'])) {
+            $tableSize = $_POST['tableSize'];
+
+            echo "<h2>Multiplication Table up to $tableSize:</h2>";
+            echo "<table border='1'>";
+            echo "<tr><th>&times;</th>";
+
+            // Display column indices
+            for ($i = 1; $i <= $tableSize; $i++) {
+                echo "<th>$i</th>";
+            }
+            echo "</tr>";
+
+            // Display multiplication table
+            for ($i = 1; $i <= $tableSize; $i++) {
+                echo "<tr><th>$i</th>";
+
+                for ($j = 1; $j <= $tableSize; $j++) {
+                    echo "<td>" . $i * $j . "</td>";
+                }
+                echo "</tr>";
+            }
+            echo "</table>";
+        }
+    }
+    ?>
+</body>
+</html>
